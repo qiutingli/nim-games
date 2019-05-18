@@ -2,83 +2,103 @@ import java.util.Scanner;
 
 public class NimGame {
 
-    private int numOfInitialStones;
-    private int maxRemoval;
-    private NimPlayer player1;
-    private NimPlayer player2;
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
+    private int upperBound;
 
-    public NimGame(int numOfInitialStones, int maxRemoval, NimPlayer player1, NimPlayer player2){
-        this.numOfInitialStones = numOfInitialStones;
-        this.maxRemoval = maxRemoval;
-        this.player1 = player1;
-        this.player2 = player2;
+    public NimGame(int numTotalStones, int upperBound, NimPlayer player1, NimPlayer player2, Scanner scanner){
+        this.scanner = scanner;
+        this.upperBound = upperBound;
+
+        printInfo(numTotalStones, player1, player2);
+        processGame(numTotalStones, player1, player2);
     }
 
+    private void printInfo(int numTotalStone, NimPlayer player1, NimPlayer player2){
+        System.out.println();
+        System.out.println("Initial stone count: " +  numTotalStone);
+        System.out.println("Maximum stone removal: " + upperBound);
+        System.out.println("Player 1: " + player1.getGivenName() + " " + player1.getFamilyName());
+        System.out.println("Player 2: " + player2.getGivenName() + " " + player2.getFamilyName());
+        System.out.println();
+    }
+
+    private void processGame(int numTotalStones, NimPlayer player1, NimPlayer player2){
+        int order = 1;
+        int numStonesLeft = numTotalStones;
+        while(numStonesLeft > 0){
+            printRemainingStones(numStonesLeft);
+            NimPlayer player = playerTurn(order, player1, player2);
+            int pick = stoneRemove(player, numStonesLeft, upperBound);
+            numStonesLeft -= pick;
+            order *= -1;
+        }
+        updatePlayerRecords(order, player1, player2);
+    }
+
+    // Calculate the number of stones that every player remove
     private int stoneRemove(NimPlayer player , int sum , int upper){
         System.out.println();
-        System.out.println(player.getUserName() + "'s turn - remove how many?");
+        System.out.println(player.getGivenName() + "'s turn - remove how many?");
         int pick = scanner.nextInt();
+        scanner.nextLine();
 
-        while(pick > upper || pick > sum || pick < 1) {
-            System.out.println("error! Please enter the correct number of the stone you want to pick");
+        if(pick > upper) {
+            System.out.println();
+            System.out.println("Invalid move. You must remove between 1 and" + " " + upperBound + " stones.");
+
+            printRemainingStones(sum);
+
+            System.out.println();
+            System.out.println(player.getGivenName() + "'s turn - remove how many?");
             pick = scanner.nextInt();
+            scanner.nextLine();
+        }
+        else if(pick > sum || pick == 0) {
+            System.out.println();
+            System.out.println("Invalid move. You must remove between 1 and " + sum + " stones.");
+            printRemainingStones(sum);
+            System.out.println();
+            System.out.println(player.getGivenName() + "'s turn - remove how many?");
+            pick = scanner.nextInt();
+            scanner.nextLine();
+
         }
         System.out.println();
         return pick;
     }
 
-    private void printAndRecordWinner(int order, NimPlayer player1, NimPlayer player2){
+    // Show the result of this game
+    private void updatePlayerRecords(int order, NimPlayer player1, NimPlayer player2){
         System.out.println("Game Over");
-        player1.increaseNumOfGamesPlayedByOne();
-        player2.increaseNumOfGamesPlayedByOne();
+        String winnerName;
 
-        String name;
-        if (order == 1) {
+        if (order == 1){
+            winnerName = player1.getGivenName() + " " + player1.getFamilyName();
             player1.increaseNumOfGamesWonByOne();
-            name = player1.getUserName();
         } else {
+            winnerName = player2.getGivenName() + " " + player2.getFamilyName();
             player2.increaseNumOfGamesWonByOne();
-            name = player2.getUserName();
         }
 
-        player1.setWinningPercentage();
-        player2.setWinningPercentage();
+        player1.increaseNumOfGamesPlayedByOne();
+        player2.increaseNumOfGamesPlayedByOne();
+        player1.updateWinningPercentage();
+        player2.updateWinningPercentage();
 
-        System.out.println(name + " wins!");
-        System.out.println();
+        System.out.println(winnerName + " wins!");
     }
 
-    private void printNumStoneLeft(int leftStones) {
+    // Print the total number of stones
+    private void printRemainingStones(int leftStones) {
         System.out.print(leftStones + " stones left:");
+
         for(int i = 0; i < leftStones; i++)
             System.out.print(" *");
     }
 
+    // Record the order of player
     private NimPlayer playerTurn(int order,NimPlayer player1, NimPlayer player2){
         return order==1? player1:player2;
     }
 
-    public void runGame(){
-        String playAgain = "";
-        do{
-            int order = 1;
-            int leftStones = numOfInitialStones;
-            NimPlayer onTurnPlayer;
-
-            while(leftStones > 0){
-                printNumStoneLeft(leftStones);
-                onTurnPlayer = playerTurn(order, player1, player2);
-                int pick = stoneRemove(onTurnPlayer, leftStones, maxRemoval);
-                leftStones -= pick;
-                order = order * (-1);
-            }
-
-            printAndRecordWinner(order, player1, player2);
-
-            System.out.println("Do you want to play again (Y/N):");
-            playAgain = scanner.next();
-
-        } while(playAgain.equalsIgnoreCase("Y"));
-    }
 }

@@ -1,0 +1,956 @@
+============================================
+vis/result.rtx
+14:38:03_Monday_06_May_2019
+============================================
+Feedback:
+Your programs have been submitted successfully. 
+Compiling your programs with "javac"...
+Your programs have been compiled successfully :-)
+Now, it's your responsibility to test your programs for correctness!
+Here is a simple test case, and the results:
+============================================
+Test for input file: in1
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$									$
+$									$
+$									$
+$									$
+$									$
+$george,George,Washington,0 games,0 wins				$george,George,Washington,0 games,0 wins
+jadams,John,Adams,0 games,0 wins					jadams,John,Adams,0 games,0 wins
+jmadison,James,Madison,0 games,0 wins					jmadison,James,Madison,0 games,0 wins
+jmonroe,James,Monroe,0 games,0 wins					jmonroe,James,Monroe,0 games,0 wins
+tom,Thomas,Jefferson,0 games,0 wins					tom,Thomas,Jefferson,0 games,0 wins
+
+$jmadison,James,Madison,0 games,0 wins					$jmadison,James,Madison,0 games,0 wins
+
+$									$
+Your results seem to be CORRECT :-).
+============================================
+Test for input file: in2
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$									$
+$The player already exists.						$The player already exists.
+
+$									$
+$gbush,George,Bush,0 games,0 wins					$gbush,George,Bush,0 games,0 wins
+george,George,Washington,0 games,0 wins					george,George,Washington,0 games,0 wins
+
+$									$
+Your results seem to be CORRECT :-).
+============================================
+Test for input file: in3
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$									$
+$									$
+$									$
+$george,George,Washington,0 games,0 wins				$george,George,Washington,0 games,0 wins
+jadams,John,Adams,0 games,0 wins					jadams,John,Adams,0 games,0 wins
+tom,Thomas,Jefferson,0 games,0 wins					tom,Thomas,Jefferson,0 games,0 wins
+
+$The player does not exist.						$The player does not exist.
+
+$									$
+$george,George,Washington,0 games,0 wins				$george,George,Washington,0 games,0 wins
+jadams,John,Adams,0 games,0 wins					jadams,John,Adams,0 games,0 wins
+
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$									$
+$									$
+Your results seem to be CORRECT :-).
+============================================
+Test for input file: in4
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$									$
+$jcarter,Jimmy,Carter,0 games,0 wins					$jcarter,Jimmy,Carter,0 games,0 wins
+
+$The player does not exist.						$The player does not exist.
+
+$									$
+$jcarter,James,Carter,0 games,0 wins					$jcarter,James,Carter,0 games,0 wins
+
+$									$
+Your results seem to be CORRECT :-).
+============================================
+Test for input file: in5
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$									$
+$									$
+$One of the players does not exist.					$One of the players does not exist.
+
+$									$
+Initial stone count: 10							Initial stone count: 10
+Maximum stone removal: 3						Maximum stone removal: 3
+Player 1: George Washington						Player 1: George Washington
+Player 2: John Adams							Player 2: John Adams
+
+10 stones left: * * * * * * * * * *					10 stones left: * * * * * * * * * *
+George's turn - remove how many?					George's turn - remove how many?
+
+7 stones left: * * * * * * *						7 stones left: * * * * * * *
+John's turn - remove how many?						John's turn - remove how many?
+
+Invalid move. You must remove between 1 and 3 stones.			Invalid move. You must remove between 1 and 3 stones.
+								     <
+7 stones left: * * * * * * *						7 stones left: * * * * * * *
+John's turn - remove how many?						John's turn - remove how many?
+
+4 stones left: * * * *							4 stones left: * * * *
+George's turn - remove how many?					George's turn - remove how many?
+
+1 stones left: *							1 stones left: *
+John's turn - remove how many?						John's turn - remove how many?
+
+Invalid move. You must remove between 1 and 1 stones.			Invalid move. You must remove between 1 and 1 stones.
+								     <
+1 stones left: *							1 stones left: *
+John's turn - remove how many?						John's turn - remove how many?
+
+Game Over								Game Over
+George Washington wins!							George Washington wins!
+
+$									$
+Oops, your results seem to be INCORRECT :-(
+============================================
+Test for input file: in6
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$									$
+$									$
+$									$
+$									$
+$									$
+Initial stone count: 1							Initial stone count: 1
+Maximum stone removal: 1						Maximum stone removal: 1
+Player 1: George Washington						Player 1: George Washington
+Player 2: John Adams							Player 2: John Adams
+
+1 stones left: *							1 stones left: *
+George's turn - remove how many?					George's turn - remove how many?
+
+Game Over								Game Over
+John Adams wins!							John Adams wins!
+
+$									$
+Initial stone count: 1							Initial stone count: 1
+Maximum stone removal: 1						Maximum stone removal: 1
+Player 1: George Washington						Player 1: George Washington
+Player 2: John Adams							Player 2: John Adams
+
+1 stones left: *							1 stones left: *
+George's turn - remove how many?					George's turn - remove how many?
+
+Game Over								Game Over
+John Adams wins!							John Adams wins!
+
+$									$
+Initial stone count: 1							Initial stone count: 1
+Maximum stone removal: 1						Maximum stone removal: 1
+Player 1: John Adams							Player 1: John Adams
+Player 2: Thomas Jefferson						Player 2: Thomas Jefferson
+
+1 stones left: *							1 stones left: *
+John's turn - remove how many?						John's turn - remove how many?
+
+Game Over								Game Over
+Thomas Jefferson wins!							Thomas Jefferson wins!
+
+$									$
+Initial stone count: 1							Initial stone count: 1
+Maximum stone removal: 1						Maximum stone removal: 1
+Player 1: Thomas Jefferson						Player 1: Thomas Jefferson
+Player 2: James Madison							Player 2: James Madison
+
+1 stones left: *							1 stones left: *
+Thomas's turn - remove how many?					Thomas's turn - remove how many?
+
+Game Over								Game Over
+James Madison wins!							James Madison wins!
+
+$100% | 01 games | James Madison					$100% | 01 games | James Madison
+67%  | 03 games | John Adams					     |	 67% | 03 games | John Adams
+50%  | 02 games | Thomas Jefferson				     |	 50% | 02 games | Thomas Jefferson
+0%   | 02 games | George Washington				     |	  0% | 02 games | George Washington
+
+$Are you sure you want to reset all player statistics? (y/n)		$Are you sure you want to reset all player statistics? (y/n)
+
+$0%   | 00 games | George Washington				     |	$  0% | 00 games | Thomas Jefferson
+0%   | 00 games | John Adams					     |	  0% | 00 games | James Madison
+0%   | 00 games | James Madison					     |	  0% | 00 games | John Adams
+0%   | 00 games | Thomas Jefferson				     |	  0% | 00 games | George Washington
+
+$									$
+Oops, your results seem to be INCORRECT :-(
+============================================
+Test for input file: in7
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$									$
+$									$
+$									$
+$									$
+$									$
+Initial stone count: 1							Initial stone count: 1
+Maximum stone removal: 1						Maximum stone removal: 1
+Player 1: George Washington						Player 1: George Washington
+Player 2: John Adams							Player 2: John Adams
+
+1 stones left: *							1 stones left: *
+George's turn - remove how many?					George's turn - remove how many?
+
+Game Over								Game Over
+John Adams wins!							John Adams wins!
+
+$									$
+Initial stone count: 1							Initial stone count: 1
+Maximum stone removal: 1						Maximum stone removal: 1
+Player 1: George Washington						Player 1: George Washington
+Player 2: John Adams							Player 2: John Adams
+
+1 stones left: *							1 stones left: *
+George's turn - remove how many?					George's turn - remove how many?
+
+Game Over								Game Over
+John Adams wins!							John Adams wins!
+
+$									$
+Initial stone count: 1							Initial stone count: 1
+Maximum stone removal: 1						Maximum stone removal: 1
+Player 1: John Adams							Player 1: John Adams
+Player 2: Thomas Jefferson						Player 2: Thomas Jefferson
+
+1 stones left: *							1 stones left: *
+John's turn - remove how many?						John's turn - remove how many?
+
+Game Over								Game Over
+Thomas Jefferson wins!							Thomas Jefferson wins!
+
+$									$
+Initial stone count: 1							Initial stone count: 1
+Maximum stone removal: 1						Maximum stone removal: 1
+Player 1: Thomas Jefferson						Player 1: Thomas Jefferson
+Player 2: James Madison							Player 2: James Madison
+
+1 stones left: *							1 stones left: *
+Thomas's turn - remove how many?					Thomas's turn - remove how many?
+
+Game Over								Game Over
+James Madison wins!							James Madison wins!
+
+$100% | 01 games | James Madison					$100% | 01 games | James Madison
+67%  | 03 games | John Adams					     |	 67% | 03 games | John Adams
+50%  | 02 games | Thomas Jefferson				     |	 50% | 02 games | Thomas Jefferson
+0%   | 02 games | George Washington				     |	  0% | 02 games | George Washington
+
+$0%   | 02 games | George Washington				     |	$  0% | 02 games | George Washington
+50%  | 02 games | Thomas Jefferson				     |	 50% | 02 games | Thomas Jefferson
+67%  | 03 games | John Adams					     |	 67% | 03 games | John Adams
+100% | 01 games | James Madison						100% | 01 games | James Madison
+
+$Are you sure you want to reset all player statistics? (y/n)		$Are you sure you want to reset all player statistics? (y/n)
+
+$0%   | 00 games | George Washington				     |	$  0% | 00 games | Thomas Jefferson
+0%   | 00 games | John Adams					     |	  0% | 00 games | James Madison
+0%   | 00 games | James Madison					     |	  0% | 00 games | John Adams
+0%   | 00 games | Thomas Jefferson				     |	  0% | 00 games | George Washington
+
+$									$
+Oops, your results seem to be INCORRECT :-(
+============================================
+Test for input file: in8
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$									$
+$The player already exists.						$The player already exists.
+
+$The player does not exist.						$The player does not exist.
+
+$									$
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$The player does not exist.						$The player does not exist.
+
+$									$
+$									$
+$									$
+$									$
+$									$
+$The player does not exist.						$The player does not exist.
+
+$									$
+$Are you sure you want to reset all player statistics? (y/n)		$Are you sure you want to reset all player statistics? (y/n)
+
+$The player does not exist.						$The player does not exist.
+
+$									$
+Initial stone count: 5							Initial stone count: 5
+Maximum stone removal: 2						Maximum stone removal: 2
+Player 1: Luke Skywalker						Player 1: Luke Skywalker
+Player 2: Darth Vader							Player 2: Darth Vader
+
+5 stones left: * * * * *						5 stones left: * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+3 stones left: * * *							3 stones left: * * *
+Darth's turn - remove how many?						Darth's turn - remove how many?
+
+2 stones left: * *							2 stones left: * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+1 stones left: *							1 stones left: *
+Darth's turn - remove how many?						Darth's turn - remove how many?
+
+Game Over								Game Over
+Luke Skywalker wins!							Luke Skywalker wins!
+
+$									$
+Initial stone count: 5							Initial stone count: 5
+Maximum stone removal: 2						Maximum stone removal: 2
+Player 1: Luke Skywalker						Player 1: Luke Skywalker
+Player 2: Darth Vader							Player 2: Darth Vader
+
+5 stones left: * * * * *						5 stones left: * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+3 stones left: * * *							3 stones left: * * *
+Darth's turn - remove how many?						Darth's turn - remove how many?
+
+2 stones left: * *							2 stones left: * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+1 stones left: *							1 stones left: *
+Darth's turn - remove how many?						Darth's turn - remove how many?
+
+Game Over								Game Over
+Luke Skywalker wins!							Luke Skywalker wins!
+
+$									$
+Initial stone count: 5							Initial stone count: 5
+Maximum stone removal: 2						Maximum stone removal: 2
+Player 1: Luke Skywalker						Player 1: Luke Skywalker
+Player 2: Darth Vader							Player 2: Darth Vader
+
+5 stones left: * * * * *						5 stones left: * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+3 stones left: * * *							3 stones left: * * *
+Darth's turn - remove how many?						Darth's turn - remove how many?
+
+2 stones left: * *							2 stones left: * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+1 stones left: *							1 stones left: *
+Darth's turn - remove how many?						Darth's turn - remove how many?
+
+Game Over								Game Over
+Luke Skywalker wins!							Luke Skywalker wins!
+
+$									$
+Initial stone count: 8							Initial stone count: 8
+Maximum stone removal: 5						Maximum stone removal: 5
+Player 1: Han Solo							Player 1: Han Solo
+Player 2: Darth Vader							Player 2: Darth Vader
+
+8 stones left: * * * * * * * *						8 stones left: * * * * * * * *
+Han's turn - remove how many?						Han's turn - remove how many?
+
+3 stones left: * * *							3 stones left: * * *
+Darth's turn - remove how many?						Darth's turn - remove how many?
+
+Game Over								Game Over
+Han Solo wins!								Han Solo wins!
+
+$									$
+Initial stone count: 8							Initial stone count: 8
+Maximum stone removal: 5						Maximum stone removal: 5
+Player 1: Han Solo							Player 1: Han Solo
+Player 2: Darth Vader							Player 2: Darth Vader
+
+8 stones left: * * * * * * * *						8 stones left: * * * * * * * *
+Han's turn - remove how many?						Han's turn - remove how many?
+
+3 stones left: * * *							3 stones left: * * *
+Darth's turn - remove how many?						Darth's turn - remove how many?
+
+Game Over								Game Over
+Han Solo wins!								Han Solo wins!
+
+$									$
+Initial stone count: 8							Initial stone count: 8
+Maximum stone removal: 5						Maximum stone removal: 5
+Player 1: Han Solo							Player 1: Han Solo
+Player 2: Darth Vader							Player 2: Darth Vader
+
+8 stones left: * * * * * * * *						8 stones left: * * * * * * * *
+Han's turn - remove how many?						Han's turn - remove how many?
+
+3 stones left: * * *							3 stones left: * * *
+Darth's turn - remove how many?						Darth's turn - remove how many?
+
+Game Over								Game Over
+Han Solo wins!								Han Solo wins!
+
+$									$
+Initial stone count: 10							Initial stone count: 10
+Maximum stone removal: 6						Maximum stone removal: 6
+Player 1: Darth Vader							Player 1: Darth Vader
+Player 2: Han Solo							Player 2: Han Solo
+
+10 stones left: * * * * * * * * * *					10 stones left: * * * * * * * * * *
+Darth's turn - remove how many?						Darth's turn - remove how many?
+
+4 stones left: * * * *							4 stones left: * * * *
+Han's turn - remove how many?						Han's turn - remove how many?
+
+Game Over								Game Over
+Darth Vader wins!							Darth Vader wins!
+
+$lskywalker,Luke,Skywalker,3 games,3 wins				$lskywalker,Luke,Skywalker,3 games,3 wins
+
+$dvader,Darth,Vader,7 games,1 wins					$dvader,Darth,Vader,7 games,1 wins
+hsolo,Han,Solo,4 games,3 wins						hsolo,Han,Solo,4 games,3 wins
+lskywalker,Luke,Skywalker,3 games,3 wins				lskywalker,Luke,Skywalker,3 games,3 wins
+
+$100% | 03 games | Luke Skywalker					$100% | 03 games | Luke Skywalker
+75%  | 04 games | Han Solo					     |	 75% | 04 games | Han Solo
+14%  | 07 games | Darth Vader					     |	 14% | 07 games | Darth Vader
+
+$100% | 03 games | Luke Skywalker					$100% | 03 games | Luke Skywalker
+75%  | 04 games | Han Solo					     |	 75% | 04 games | Han Solo
+14%  | 07 games | Darth Vader					     |	 14% | 07 games | Darth Vader
+
+$14%  | 07 games | Darth Vader					     |	$ 14% | 07 games | Darth Vader
+75%  | 04 games | Han Solo					     |	 75% | 04 games | Han Solo
+100% | 03 games | Luke Skywalker					100% | 03 games | Luke Skywalker
+
+$One of the players does not exist.					$One of the players does not exist.
+
+$									$
+Initial stone count: 10							Initial stone count: 10
+Maximum stone removal: 3						Maximum stone removal: 3
+Player 1: Luke Skywalker						Player 1: Luke Skywalker
+Player 2: Han Solo							Player 2: Han Solo
+
+10 stones left: * * * * * * * * * *					10 stones left: * * * * * * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+7 stones left: * * * * * * *						7 stones left: * * * * * * *
+Han's turn - remove how many?						Han's turn - remove how many?
+
+Invalid move. You must remove between 1 and 3 stones.			Invalid move. You must remove between 1 and 3 stones.
+								     <
+7 stones left: * * * * * * *						7 stones left: * * * * * * *
+Han's turn - remove how many?						Han's turn - remove how many?
+
+4 stones left: * * * *							4 stones left: * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+1 stones left: *							1 stones left: *
+Han's turn - remove how many?						Han's turn - remove how many?
+
+Invalid move. You must remove between 1 and 1 stones.			Invalid move. You must remove between 1 and 1 stones.
+								     <
+1 stones left: *							1 stones left: *
+Han's turn - remove how many?						Han's turn - remove how many?
+
+Game Over								Game Over
+Luke Skywalker wins!							Luke Skywalker wins!
+
+$100% | 04 games | Luke Skywalker					$100% | 04 games | Luke Skywalker
+60%  | 05 games | Han Solo					     |	 60% | 05 games | Han Solo
+14%  | 07 games | Darth Vader					     |	 14% | 07 games | Darth Vader
+
+$									$
+Oops, your results seem to be INCORRECT :-(
+============================================
+src/NimGame.java
+14:38:00_Monday_06_May_2019
+============================================
+import java.util.Scanner;
+
+public class NimGame {
+
+    private Scanner scanner;
+    private int totalStone;
+    private int upperBound;
+
+    public NimGame(int totalStone, int upperBound, NimPlayer player1, NimPlayer player2, Scanner scanner){
+        this.scanner = scanner;
+        this.totalStone = totalStone;
+        this.upperBound = upperBound;
+
+        int order=1;
+        int leftStones = totalStone;
+
+        System.out.println();
+        System.out.println("Initial stone count: " +  totalStone);
+        System.out.println("Maximum stone removal: " + upperBound);
+        System.out.println("Player 1: " + player1.getGivenName() + " " + player1.getFamilyName());
+        System.out.println("Player 2: " + player2.getGivenName() + " " + player2.getFamilyName());
+        System.out.println();
+
+        while(leftStones>0){
+            printLeftStones(leftStones);
+            NimPlayer player = playerTurn(order, player1, player2);
+            int pick = stoneRemove(player, leftStones, upperBound);
+            leftStones -=pick;
+            order = order * (-1);
+        }
+        printWinner(order, player1, player2);
+    }
+
+    //Calculate the number of stones that every player remove
+    private int stoneRemove(NimPlayer player , int sum , int upper){
+        System.out.println();
+        System.out.println(player.getGivenName()+"'s turn - remove how many?");
+        int pick = scanner.nextInt();
+        scanner.nextLine();
+
+        if(pick > upper) {
+            System.out.println();
+            System.out.println("Invalid move. You must remove between 1 and" + " " + upperBound + " stones.");
+
+            printLeftStones(sum);
+
+            System.out.println();
+            System.out.println(player.getGivenName() + "'s turn - remove how many?");
+            pick = scanner.nextInt();
+            scanner.nextLine();
+        }
+        else if(pick > sum || pick == 0) {
+            System.out.println();
+            System.out.println("Invalid move. You must remove between 1 and " + sum + " stones.");
+            printLeftStones(sum);
+            System.out.println();
+            System.out.println(player.getGivenName() + "'s turn - remove how many?");
+            pick = scanner.nextInt();
+            scanner.nextLine();
+
+        }
+        System.out.println();
+        return pick;
+    }
+
+    private double getWinningPercentage(NimPlayer player){
+        double percentage = 0;
+        double numGameWon = player.getNumOfGamesWon();
+        double numGamePlayed = player.getNumOfGamesPlayed();
+        if (player.getNumOfGamesPlayed() != 0){
+            percentage = numGameWon/numGamePlayed;
+        }
+        return percentage;
+    }
+
+    // show the result of this game
+    private void printWinner(int order, NimPlayer player1, NimPlayer player2){
+        System.out.println("Game Over");
+
+        String name;
+
+        if (order == 1){
+            name = player1.getGivenName() + " " + player1.getFamilyName();
+            player1.increaseNumOfGamesWonByOne();
+            player1.increaseNumOfGamesPlayedByOne();
+            player2.increaseNumOfGamesPlayedByOne();
+            player1.winningPercentage = getWinningPercentage(player1);
+            player2.winningPercentage = getWinningPercentage(player2);
+        }
+        else{
+            name = player2.getGivenName() + " " + player2.getFamilyName();
+            player2.increaseNumOfGamesWonByOne();
+            player1.increaseNumOfGamesPlayedByOne();
+            player2.increaseNumOfGamesPlayedByOne();
+            player1.winningPercentage = getWinningPercentage(player1);
+            player2.winningPercentage = getWinningPercentage(player2);
+        }
+
+        System.out.println(name+" wins!");
+
+    }
+
+    //print the total number of stonespr
+    private void printLeftStones(int leftStones) {
+        System.out.print(leftStones + " stones left:");
+
+        for(int i=0; i<leftStones; i++)
+            System.out.print(" *");
+    }
+
+    //record the order of player
+    private NimPlayer playerTurn(int order,NimPlayer player1, NimPlayer player2){
+        return order==1? player1:player2;
+    }
+}
+============================================
+src/Nimsys.java
+14:38:00_Monday_06_May_2019
+============================================
+import java.text.DecimalFormat;
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Nimsys {
+
+    NimPlayer[] players = new NimPlayer[0];
+    Scanner scanner = new Scanner(System.in);
+    private NimGame game;
+
+    private Integer getIndexOfUsername(String username){
+        for(int i = 0; i < players.length; i++){
+            NimPlayer player = players[i];
+            if(player.getUserName().equals(username)){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private NimPlayer createPlayer(String username, String givenName, String familyName){
+        NimPlayer player = new NimPlayer();
+        player.setUserName(username);
+        player.setGivenName(givenName);
+        player.setFamilyName(familyName);
+        return player;
+    }
+
+    public void addPlayer(String username, String familyName, String givenName){
+        int index = getIndexOfUsername(username);
+        if(index == -1){
+            players = addPlayerHelper(username, givenName, familyName);
+        }else{
+            System.out.println("The player already exists.");
+        }
+    }
+
+    private NimPlayer[] addPlayerHelper(String username, String givenName, String familyName){
+        NimPlayer player = createPlayer(username, givenName, familyName);
+        NimPlayer[] newPlayers = new NimPlayer[players.length + 1];
+        System.arraycopy(players, 0, newPlayers, 0, players.length);
+        newPlayers[players.length] = player;
+        return newPlayers;
+    }
+
+    public void removePlayer(String username){
+        int index = getIndexOfUsername(username);
+        if(index == -1){
+            System.out.println("The player does not exist.");
+        }else {
+            players = removePlayerHelper(players, index);
+        }
+    }
+
+    private NimPlayer[] removePlayerHelper(NimPlayer[] arr, int index){
+        NimPlayer[] newArr = new NimPlayer[arr.length - 1];
+        for(int i = index; i < arr.length - 1; i++){
+            arr[i] = arr[i+1];
+        }
+        System.arraycopy(arr, 0, newArr, 0, arr.length - 1);
+        return newArr;
+    }
+
+    public void editPlayer(String username, String newFamilyName, String newGivenName){
+        int index = getIndexOfUsername(username);
+        if(index == -1){
+            System.out.println("The player does not exist.");
+        }else{
+            NimPlayer player = players[index];
+            player.setGivenName(newGivenName);
+            player.setFamilyName(newFamilyName);
+            players[index] = player;
+        }
+
+    }
+
+    public void resetStats(String username){
+        int index = getIndexOfUsername(username);
+        if(index == -1){
+            System.out.println("The player does not exist.");
+        }else{
+            NimPlayer player = players[index];
+            player.resetStatsOfPlayer();
+        }
+    }
+
+    public void displayPlayer(String username){
+        int index = getIndexOfUsername(username);
+        if(index == -1){
+            System.out.println("The player does not exist.");
+        }else{
+            NimPlayer player = players[index];
+            System.out.println(player.getUserName() + "," + player.getGivenName() + "," + player.getFamilyName()
+                    + "," + player.getNumOfGamesPlayed() + " games," + player.getNumOfGamesWon() + " wins");
+        }
+    }
+
+    private void caseAddHandler(String[] inputs, int inputsLength) {
+        if (inputsLength == 1) {
+            System.out.println("Adding a player requires two string inputs separated by space");
+        } else if (inputsLength == 2) {
+            String parameters = inputs[1];
+            String[] names = parameters.split(",");
+            addPlayer(names[0], names[1], names[2]);
+        }
+    }
+
+    private void caseRemoveHandler(String[] inputs, int inputsLength){
+        if (inputsLength == 1){
+            System.out.println("Are you sure you want to remove all players? (y/n)");
+            String confirm = scanner.nextLine().split(" ")[0];
+            if (confirm.equals("y")){
+                for(NimPlayer player: players){
+                    removePlayer(player.getUserName());
+                }
+            }
+
+        } else if (inputsLength == 2) {
+            String username = inputs[1];
+            removePlayer(username);
+        }
+    }
+
+    private void caseEditHandler(String[] inputs, int inputsLength){
+        if (inputsLength == 1){
+            System.out.println("Editing a player requires two string inputs separated by space");
+        } else if (inputsLength == 2) {
+            String parameters = inputs[1];
+            String[] names = parameters.split(",");
+            editPlayer(names[0], names[1], names[2]);
+        }
+    }
+
+    private void caseResetHandler(String[] inputs, int inputsLength){
+        if (inputsLength == 1){
+            System.out.println("Are you sure you want to reset all player statistics? (y/n)");
+            String confirm = scanner.nextLine().split(" ")[0];
+            if (confirm.equals("y")){
+                for(NimPlayer player: players){
+                    resetStats(player.getUserName());
+                }
+            }
+        } else if (inputsLength == 2) {
+            String username = inputs[1];
+            resetStats(username);
+        }
+    }
+
+    private void caseDisplayHandler(String[] inputs, int inputsLength){
+        Arrays.sort(players);
+        if (inputsLength == 1){
+            for(NimPlayer player: players){
+                displayPlayer(player.getUserName());
+            }
+        } else if (inputsLength == 2) {
+            String username = inputs[1];
+            displayPlayer(username);
+        }
+    }
+
+    private void caseRankingsHandler(String[] inputs, int inputsLength){
+        if (inputsLength == 1){
+            Arrays.sort(players, Collections.reverseOrder());
+        } else if (inputsLength == 2){
+            String parameters = inputs[1];
+            if (parameters.equals("desc")){
+                Arrays.sort(players, Collections.reverseOrder());
+            } else if (parameters.equals("asc")){
+                Arrays.sort(players);
+            }
+        }
+        for (NimPlayer player: players){
+            DecimalFormat percFormat = new DecimalFormat("0%");
+            DecimalFormat numGameFormat = new DecimalFormat("00");
+
+            String numOfGame = numGameFormat.format(player.getNumOfGamesPlayed());
+            String percentage = percFormat.format(player.winningPercentage);
+
+            String newPercentage = percentage.length() == 4?
+                    percentage:(percentage.length() == 3? " " + percentage: "  " + percentage);
+            System.out.println(newPercentage + " | " + numOfGame
+                    + " games | " + player.getGivenName() + " " + player.getFamilyName());
+
+//            System.out.printf("\n%-5s| %s games | ", percentage, numOfGame);
+//            System.out.printf("%s %s", player.getGivenName(), player.getFamilyName());
+        }
+    }
+
+    private void caseStartGameHandler(String[] inputs, int inputsLength, Scanner scanner){
+        if (inputsLength == 1){
+            System.out.println("Starting a game requires two string inputs separated by space");
+        } else if (inputsLength == 2) {
+            String parameters = inputs[1];
+            String[] names = parameters.split(",");
+
+            int ind1 = getIndexOfUsername(names[2]);
+            int ind2 = getIndexOfUsername(names[3]);
+            if(ind1 != -1 && ind2 != -1){
+                NimPlayer player1 = players[getIndexOfUsername(names[2])];
+                NimPlayer player2 = players[getIndexOfUsername(names[3])];
+                game = new NimGame(Integer.parseInt(names[0]), Integer.parseInt(names[1]), player1, player2, scanner);
+            }else{
+                System.out.println("One of the players does not exist.");
+            }
+        }
+    }
+
+    private void inputAnalyzer(String input){
+
+        String[] inputs = input.split(" ");
+        int inputsLength = inputs.length;
+        String command = inputs[0];
+
+        switch (command){
+            case "addplayer":
+                caseAddHandler(inputs, inputsLength);
+                break;
+
+            case "removeplayer":
+                caseRemoveHandler(inputs, inputsLength);
+                break;
+
+            case "editplayer":
+                caseEditHandler(inputs, inputsLength);
+                break;
+
+            case "resetstats":
+                caseResetHandler(inputs, inputsLength);
+                break;
+
+            case "displayplayer":
+                caseDisplayHandler(inputs, inputsLength);
+                break;
+
+            case "rankings":
+                caseRankingsHandler(inputs, inputsLength);
+                break;
+
+            case "startgame":
+                caseStartGameHandler(inputs, inputsLength, scanner);
+                break;
+
+            case "exit":
+                System.out.println();
+                System.exit(0);
+                break;
+        }
+    }
+
+    public static void main(String[] args){
+        System.out.println("Welcome to Nim");
+        Nimsys sys = new Nimsys();
+
+        while (true){
+            System.out.println();
+            System.out.print("$");
+            String input = sys.scanner.nextLine();
+            sys.inputAnalyzer(input);
+        }
+    }
+}============================================
+src/NimPlayer.java
+14:38:00_Monday_06_May_2019
+============================================
+public class NimPlayer implements Comparable {
+    /**
+     *
+     * @param args
+     */
+
+    private String username;
+    private String familyName;
+    private String givenName;
+    private Integer numOfGamesPlayed = 0;
+    private Integer numOfGamesWon = 0;
+    public double winningPercentage = 0;
+
+    public void setUserName(String username){
+        this.username = username;
+    }
+
+    public String getUserName(){
+        return this.username;
+    }
+
+    public void setGivenName(String givenName){
+        this.givenName = givenName;
+    }
+
+    public String getGivenName(){
+        return this.givenName;
+    }
+
+    public void setFamilyName(String familyName){
+        this.familyName = familyName;
+    }
+
+    public String getFamilyName(){
+        return this.familyName;
+    }
+
+    public void setNumOfGamesPlayed(Integer num){
+        this.numOfGamesPlayed = num;
+    }
+
+    public Integer getNumOfGamesPlayed(){
+        return this.numOfGamesPlayed;
+    }
+
+    public void increaseNumOfGamesPlayedByOne(){
+        this.numOfGamesPlayed += 1;
+    }
+
+    public void setNumOfGamesWon(Integer num){
+        this.numOfGamesWon = num;
+    }
+
+    public Integer getNumOfGamesWon(){
+        return this.numOfGamesWon;
+    }
+
+    public void increaseNumOfGamesWonByOne(){
+        this.numOfGamesWon += 1;
+    }
+
+    public void setWinningPercentage(){
+        if (this.numOfGamesPlayed == 0){
+            this.winningPercentage = 0;
+        } else {
+            this.winningPercentage = getNumOfGamesWon()/getNumOfGamesPlayed();
+        }
+    }
+
+    public double getWinningPercentage(){
+        return this.winningPercentage;
+    }
+
+    public void resetStatsOfPlayer(){
+        setNumOfGamesPlayed(0);
+        setNumOfGamesWon(0);
+        this.winningPercentage = 0;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        NimPlayer player = (NimPlayer) o;
+        int compareResult = winningPercentage > player.winningPercentage?
+                1:(winningPercentage == player.winningPercentage? 0:-1);
+        if (compareResult == 0){
+            compareResult = username.compareTo(player.username);
+        }
+        return compareResult;
+    }
+}

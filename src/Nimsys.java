@@ -5,7 +5,8 @@ import java.util.Arrays;
 
 public class Nimsys {
 
-    NimPlayer[] players = new NimPlayer[0];
+    private NimPlayer[] players = new NimPlayer[0];
+    private Scanner scanner = new Scanner(System.in);
 
     private Integer getIndexOfUsername(String username){
         for(int i = 0; i < players.length; i++){
@@ -25,12 +26,12 @@ public class Nimsys {
         return player;
     }
 
-    public void addPlayer(String username, String givenName, String familyName){
+    private void addPlayer(String username, String familyName, String givenName){
         int index = getIndexOfUsername(username);
         if(index == -1){
             players = addPlayerHelper(username, givenName, familyName);
         }else{
-            System.out.println("The player already exsists.");
+            System.out.println("The player already exists.");
         }
     }
 
@@ -42,7 +43,7 @@ public class Nimsys {
         return newPlayers;
     }
 
-    public void removePlayer(String username){
+    private void removePlayer(String username){
         int index = getIndexOfUsername(username);
         if(index == -1){
             System.out.println("The player does not exist.");
@@ -60,7 +61,7 @@ public class Nimsys {
         return newArr;
     }
 
-    public void editPlayer(String username, String newGivenName, String newFamilyName){
+    private void editPlayer(String username, String newFamilyName, String newGivenName){
         int index = getIndexOfUsername(username);
         if(index == -1){
             System.out.println("The player does not exist.");
@@ -73,25 +74,19 @@ public class Nimsys {
 
     }
 
-    public void resetStats(String username){
+    private void resetStats(String username){
         int index = getIndexOfUsername(username);
         if(index == -1){
-            System.out.println("The player does not exist");
+            System.out.println("The player does not exist.");
         }else{
             NimPlayer player = players[index];
             player.resetStatsOfPlayer();
         }
     }
 
-    public void displayPlayer(String username){
-        int index = getIndexOfUsername(username);
-        if(index == -1){
-            System.out.println("The player does not exist");
-        }else{
-            NimPlayer player = players[index];
-            System.out.println(player.getUserName() + ", " + player.getGivenName() + ", " + player.getFamilyName()
-                    + ", " + player.getNumOfGamesPlayed() + " games, " + player.getNumOfGamesWon() + " wins");
-        }
+    private void displayPlayer(NimPlayer player){
+        System.out.println(player.getUserName() + "," + player.getGivenName() + "," + player.getFamilyName()
+                + "," + player.getNumOfGamesPlayed() + " games," + player.getNumOfGamesWon() + " wins");
     }
 
     private void caseAddHandler(String[] inputs, int inputsLength) {
@@ -107,8 +102,7 @@ public class Nimsys {
     private void caseRemoveHandler(String[] inputs, int inputsLength){
         if (inputsLength == 1){
             System.out.println("Are you sure you want to remove all players? (y/n)");
-            Scanner scanner = new Scanner(System.in);
-            String confirm = scanner.next();
+            String confirm = scanner.nextLine().split(" ")[0];
             if (confirm.equals("y")){
                 for(NimPlayer player: players){
                     removePlayer(player.getUserName());
@@ -134,8 +128,7 @@ public class Nimsys {
     private void caseResetHandler(String[] inputs, int inputsLength){
         if (inputsLength == 1){
             System.out.println("Are you sure you want to reset all player statistics? (y/n)");
-            Scanner scanner = new Scanner(System.in);
-            String confirm = scanner.next();
+            String confirm = scanner.nextLine().split(" ")[0];
             if (confirm.equals("y")){
                 for(NimPlayer player: players){
                     resetStats(player.getUserName());
@@ -148,13 +141,18 @@ public class Nimsys {
     }
 
     private void caseDisplayHandler(String[] inputs, int inputsLength){
+        Arrays.sort(players);
         if (inputsLength == 1){
             for(NimPlayer player: players){
-                displayPlayer(player.getUserName());
+                displayPlayer(player);
             }
         } else if (inputsLength == 2) {
-            String username = inputs[1];
-            displayPlayer(username);
+            try{
+                int playerIndex = getIndexOfUsername(inputs[1]);
+                displayPlayer(players[playerIndex]);
+            }catch (Exception e){
+                System.out.println("The player does not exist.");
+            }
         }
     }
 
@@ -170,18 +168,25 @@ public class Nimsys {
             }
         }
         for (NimPlayer player: players){
-            DecimalFormat df = new DecimalFormat("0%");
-            String percentage = df.format(player.getWinningPercentage());
-            String newPercentage = percentage.length() == 4?
-                    percentage:(percentage.length() == 3? " " + percentage: "  " + percentage);
-            System.out.println(" | " + newPercentage + " | " + player.getNumOfGamesPlayed()
-                    + " | " + player.getGivenName() + " " + player.getFamilyName());
+            DecimalFormat percFormat = new DecimalFormat("0%");
+            DecimalFormat numGameFormat = new DecimalFormat("00");
+
+            String numOfGame = numGameFormat.format(player.getNumOfGamesPlayed());
+            String percentage = percFormat.format(player.getWinningPercentage());
+
+//            String newPercentage = percentage.length() == 4?
+//                    percentage:(percentage.length() == 3? percentage + " ": percentage + "  ");
+//            System.out.println(newPercentage + " | " + numOfGame
+//                    + " games | " + player.getGivenName() + " " + player.getFamilyName());
+
+            System.out.printf("\n%-5s| %s games | %s %s", percentage, numOfGame, player.getGivenName(), player.getFamilyName());
         }
     }
 
-    private void caseStartGameHandler(String[] inputs, int inputsLength){
+    private void caseStartGameHandler(String[] inputs, int inputsLength, Scanner scanner){
         if (inputsLength == 1){
-            System.out.println("Starting a game requires two string inputs separated by space");
+            System.out.println("Starting a game requires two string inputs separated by space. " +
+                    "Please check your command!");
         } else if (inputsLength == 2) {
             String parameters = inputs[1];
             String[] names = parameters.split(",");
@@ -191,11 +196,9 @@ public class Nimsys {
             if(ind1 != -1 && ind2 != -1){
                 NimPlayer player1 = players[getIndexOfUsername(names[2])];
                 NimPlayer player2 = players[getIndexOfUsername(names[3])];
-                NimGame game = new NimGame(Integer.parseInt(names[0]), Integer.parseInt(names[1]), player1, player2);
-                game.runGame();
-                System.out.println(players[getIndexOfUsername(names[2])].getNumOfGamesPlayed());
+                NimGame game = new NimGame(Integer.parseInt(names[0]), Integer.parseInt(names[1]), player1, player2, scanner);
             }else{
-                System.out.println("One of the players does not exist");
+                System.out.println("One of the players does not exist.");
             }
         }
     }
@@ -232,28 +235,27 @@ public class Nimsys {
                 break;
 
             case "startgame":
-                caseStartGameHandler(inputs, inputsLength);
+                caseStartGameHandler(inputs, inputsLength, scanner);
                 break;
 
             case "exit":
+                System.out.println();
                 System.exit(0);
                 break;
 
             default:
-                System.out.println("Check your command please!");
-                break;
+                System.out.println("Please check your command!");
         }
     }
 
     public static void main(String[] args){
         System.out.println("Welcome to Nim");
         Nimsys sys = new Nimsys();
-        Scanner inputScanner = new Scanner(System.in);
 
         while (true){
             System.out.println();
             System.out.print("$");
-            String input = inputScanner.nextLine();
+            String input = sys.scanner.nextLine();
             sys.inputAnalyzer(input);
         }
     }
