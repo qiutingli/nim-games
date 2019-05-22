@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74aa6d97-0d24-4286-a140-4880a97efbae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Testable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NimGame/NimGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NimGame/NimGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NimGame/NimPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NimGame/NimPlayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NimGame/Nimsys.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NimGame/Nimsys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileIOManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NimAIPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NimAIPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NimGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NimGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NimHumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NimHumanPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NimPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NimPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Nimsys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Nimsys.java" afterDir="false" />
     </list>
@@ -26,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Nimsys.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="181" column="128" selection-start-line="181" selection-start-column="128" selection-end-line="181" selection-end-column="128" />
+            <state relative-caret-position="560">
+              <caret line="240" column="55" selection-start-line="240" selection-start-column="55" selection-end-line="240" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,22 +41,30 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/NimGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="82" column="48" lean-forward="true" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
+            <state relative-caret-position="465">
+              <caret line="31" column="79" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NimPlayer.java">
+        <entry file="file://$PROJECT_DIR$/src/NimHumanPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+            <state relative-caret-position="330">
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -71,6 +82,10 @@
       <find>System.out.print</find>
       <find>are</find>
       <find>invalid</find>
+      <find>println()</find>
+      <find>?</find>
+      <find>tx</find>
+      <find>txt</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,14 +94,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Nimsys.java" />
+        <option value="$PROJECT_DIR$/src/PlayerUsernameComparator.java" />
+        <option value="$PROJECT_DIR$/src/FileIOManager.java" />
+        <option value="$PROJECT_DIR$/players.txt" />
+        <option value="$PROJECT_DIR$/src/Testable.java" />
         <option value="$PROJECT_DIR$/src/NimPlayer.java" />
+        <option value="$PROJECT_DIR$/src/NimAIPlayer.java" />
+        <option value="$PROJECT_DIR$/src/Nimsys.java" />
+        <option value="$PROJECT_DIR$/src/NimHumanPlayer.java" />
         <option value="$PROJECT_DIR$/src/NimGame.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="730" />
+    <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -110,8 +131,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,7 +158,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Nimsys">
+    <configuration name="FileIOManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FileIOManager" />
+      <module name="NimGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Nimsys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Nimsys" />
       <module name="NimGame" />
@@ -148,6 +176,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Nimsys" />
+        <item itemvalue="Application.FileIOManager" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +206,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14536741" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10969116" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -185,8 +214,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32970297" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21485148" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32871288" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18118812" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30963856" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -194,7 +223,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32970297" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32891566" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32871288" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32771084" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -206,10 +235,56 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Nimsys.java">
+    <entry file="file://$PROJECT_DIR$/src/PlayerUsernameComparator.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/NumberFormatException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="181" column="128" selection-start-line="181" selection-start-column="128" selection-end-line="181" selection-end-column="128" />
+        <state relative-caret-position="207">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="988" column="31" selection-start-line="988" selection-start-column="31" selection-end-line="988" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Testable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileIOManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/players.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="212" selection-start-line="212" selection-end-line="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/players.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NimAIPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -218,15 +293,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NimPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="52" column="50" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+        <state relative-caret-position="135">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Nimsys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="240" column="55" selection-start-line="240" selection-start-column="55" selection-end-line="240" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NimHumanPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NimGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="82" column="48" lean-forward="true" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
+        <state relative-caret-position="465">
+          <caret line="31" column="79" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
         </state>
       </provider>
     </entry>

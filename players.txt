@@ -1,0 +1,2 @@
+1,artoo,R2,D2,1,1
+0,lskywalker,Luke,Skywalker,1,0
